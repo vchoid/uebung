@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <link rel="stylesheet" href="../CSS/minesweeper.css">
+        <title>Minesweeper</title>
+        <script
+                src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../JS/minesweeperModelController.js">
+        </script>
+    </head>
+    <body oncontextmenu="return false" onload="genTable(5,5)">
+
+
+
+
+        <div id="matchField">
+            <table>
+                <tbody id="tbody" onclick="initGame()">
+                </tbody>
+            </table>
+        </div>
+        <p id="timer"></p>
+
+
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="../CSS/minesweeper.css">
+<title>Minesweeper</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="../JS/minesweeperModelController.js">
+</script>
+</head>
+<body oncontextmenu="return false" onload="genTable(9)">
+	
+	<p>Wähle eine Schwierigkeitsstufe aus.</p>
+	<div>
+	<form name="levelSelection">
+	<input type="radio" name="level" id="leicht" value="5"  >Kinderleicht
+	<input type="radio" name="level" id="mittel" value="20" checked>Normal
+	<input type="radio" name="level" id="schwer" value="50" >Pro
+	</form>
+	<br>
+	</div>
+	
+	<div id="matchField">
+		<table>
+			<tbody id="tbody" onclick="spreadBombs();startCount()">
+			</tbody>
+		</table>
+	</div>
+
+	<p id="timer"></p>
+
+</body>
+</html>

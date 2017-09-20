@@ -1,0 +1,139 @@
+html {
+	font-family: sans-serif;
+	
+	animation-duration: 0.5s;
+  	animation-name: start;
+}
+
+@keyframes start {
+  from {
+    opacity: 0.5;
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+td {
+	background: lightgrey;
+	border-style: outset;
+	border-width: 2px;
+	border-radius: 3px;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin-top: -2px;
+	margin-left: 0px;
+	font-size: 20px;
+	text-align: center;
+	text-shadow: 1px 1px 5px black;
+	color:white;
+	
+	animation-duration: 0.3s;
+ 	animation-name: blurIt;
+}
+@keyframes blurIt {
+  from {
+   -webkit-filter: blur(5px);filter: blur(5px);
+  }
+  to {
+   -webkit-filter: blur(0px);filter: blur(0px);
+  }
+}
+td:hover{
+	background: grey;
+	border-style: inset;
+	
+	animation-duration: 0.3s;
+ 	animation-name: blinkInset;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+}
+@keyframes blinkInset {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+.deactivate {
+	background: lightgrey;
+	border-style: inset;
+}
+
+.flag{
+	border-style: outset;
+	font-family: "Webdings";
+}
+.flag:empty:after{
+	background: lightgreen;
+	content: 'd'; 
+	color:white;
+}
+
+.question{
+	font-family: "Webdings";
+	border-style: outset;
+}
+
+.question:empty:after{
+	font-family: "Webdings";
+	background: lightblue;
+	content: 's';
+	color:white;
+}
+
+#boom{
+	background: red;
+	border-style: inset;
+	font-family: "Webdings";
+}
+#boom:empty:after{
+	content: '+';
+	color:yellow; 
+}
+/*
+ TODO background auf unsichtbar ändern
+*/
+#bomb{
+	background: #ff8080;
+/* 	background: lightgrey; */
+	border-style: outset;
+	animation-duration: 0.5s;
+  	animation-name: start;
+  	animation-direction: alternate;
+}
+
+
+#bombDeac{
+	background: #00ff80;
+	border-style: inset;
+	font-family: "Webdings";
+}
+#bombDeac:empty:after{
+	content: '*';
+	color:#ffff80; 
+}
+
+#timer{
+	animation-duration: 0.5s;
+ 	animation-name: jump;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+}
+
+@keyframes jump {
+  from {
+    font-size:20px;
+    text-shadow: 2px 1px 1px #000000;
+  }
+  to {
+    font-size:50px;
+    text-shadow: 50px 50px 30px #cecece;
+	color:#494949;
+  }
+}

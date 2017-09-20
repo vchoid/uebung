@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";
+
+html {
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+}
+
+iframe {
+  max-width: 100%;
+}

@@ -1,0 +1,37 @@
+1. Feld
+	Werte:
+	- X (vielleicht)
+	- Y (vielleicht)
+	- numberOfBombs
+	- isBomb
+	- isRevealed
+	- isFlagged
+	Funktionen:
+	- reveal(bombCount):
+		- numberOfBombs = bombCount
+		
+	-flag(): setzen des isFlagged-Flags
+
+2. Feldcontroller
+	Werte:
+		- Anzahl der Bomben
+		- ClickHandler
+		- Liste mit Feldern
+	Funktionen:
+		- click():
+			- überprüfen, ob Feld Bombe: Boom
+			- überprüfen, ob Feld flagged: nichts
+			- Zählen der benachbarten Bomben
+			- feld.reveal
+			- wenn Anzahl Bomben = 0:
+				Nachbarfelder aufdecken
+			- Anzeige
+		- initialize():
+			- initialisieren der Felder
+			- verteilen von Bomben
+			- evtl. Zeit messen
+			
+3. Anzeige:	
+	- Ausgabe aller Felder in einer sonstwie gearteten Form (Tabelle, Spans im Textfeld, Buttons, etc.)
+
+4. erzeugen und initialisieren eines Feldcontrollers
