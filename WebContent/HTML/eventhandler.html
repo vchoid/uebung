@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<meta charset="ISO-8859-1">
-<title>Eventhandler</title>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <title>Eventhandler</title>
 </head>
+
 <body>
-	<div class="bmi-calc">
-		<h1>BMI Rechner</h1>
-		<label for="height">Körpergröße:</label>
-		 <input type="text" id="height" name="height"> 
-		<br>
-		<label for="weight">Gewicht:</label>
-		<input type="text" id="weight" name="weight">
-		<br>
-	</div>
+    <form class="bmi-calc">
+        <h1>BMI Rechner</h1>
+        <label for="height">KÃ¶rpergrÃ¶ÃŸe:</label>
+        <input type="number" id="height" name="height" step="0.01" min="0.5" max="4">
+        <br>
+        <label for="weight">Gewicht:</label>
+        <input type="number" id="weight" name="weight" step="0.01" min="10" max="600">
+        <br>
+        <div><b>Dein BMI:</b>
+            <span id="bmi">00.00</span>
+        </div>
+    </form>
+
+    <div>Wahrheitstabelle:
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>erg</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+
+            </tbody>
+
+        </table>
 
 
-<script type="text/javascript" src="../JS/eventhandler.js"></script>
+    </div>
+
+    <script type="text/javascript" src="../JS/eventhandler.js"></script>
 </body>
+
 </html>
