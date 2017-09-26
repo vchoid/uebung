@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <title>Eventhandler</title>
+</head>
+
+<body>
+    <form class="bmi-calc">
+        <h1>BMI Rechner</h1>
+        <label for="height">Körpergröße:</label>
+        <input type="number" id="height" name="height" step="0.01" min="0.5" max="4">
+        <br>
+        <label for="weight">Gewicht:</label>
+        <input type="number" id="weight" name="weight" step="0.01" min="10" max="600">
+        <br>
+        <div><b>Dein BMI:</b>
+            <span id="result">00.00</span>
+            <span id="below" style="display:none">Sie wiegen zu wenig.</span>
+            <span id="normal" style="display:none">Du hast normales Gewicht.</span>
+            <span id="above" style="display:none">Schon zu dick.</span>
+        </div>
+    </form>
+
+
+    <script type="text/javascript" src="../JS/bmi.js"></script>
+</body>
+
+</html>

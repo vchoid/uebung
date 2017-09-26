@@ -1,0 +1,74 @@
+.gallery {
+    clear: both;
+}
+
+.gallery-item {
+    float: left;
+    display: block;
+    text-decoration: none;
+    padding: 3px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.gallery img {
+    max-width: 200px;
+}
+
+.normal {
+    animation-duration: 0.3s;
+    animation-name: fadeInBlur;
+}
+
+.blur {
+    opacity: 0.7;
+    -webkit-filter: blur(3em);
+    filter: blur(3em);
+    animation-duration: 0.3s;
+    animation-name: fadeInBlur;
+}
+
+@keyframes fadeInBlur {
+    from {
+        opacity: 1;
+        -webkit-filter: blur(0em);
+        filter: blur(0em);
+    }
+}
+
+#lightbox__overlay-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+#lightbox__overlay-img {
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    padding: 3px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: white;
+    box-shadow: 0 0 8em rgba(0, 0, 0, 0.80);
+    animation-duration: 0.2s;
+    animation-name: zoom;
+}
+
+@keyframes zoom {
+    from {
+        opacity: 0.5;
+        -webkit-filter: blur(1em);
+        filter: blur(1em);
+        box-shadow: 0.5em 0.5em 0.5em black;
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
