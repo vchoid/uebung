@@ -24,10 +24,10 @@ jQuery(document).ready(function() {
 
         if (result < 18.5) {
             $('#below').show()
-        } else if (bmi >= 18.5 && bmi <= 25) {
+        } else if (result >= 18.5 && result <= 25) {
             $('#normal').show()
 
-        } else if (!(isNaN(bmi)) && bmi > 25) {
+        } else if (!(isNaN(result)) && result > 25) {
             $('#above').show();
 
         }

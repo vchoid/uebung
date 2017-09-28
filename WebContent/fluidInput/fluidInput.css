@@ -1,0 +1,12 @@
+.fluidInput {
+    clear: both;
+    outline: none;
+    border: 1px solid grey;
+    border-style: none none solid none;
+    transition: border 2s;
+}
+
+.fluidInput:hover {
+    border: 10px solid #000A97;
+    border-style: none none solid none;
+}

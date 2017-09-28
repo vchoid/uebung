@@ -3,8 +3,11 @@
 jQuery.fn.lightbox = function() {
 
     function removeOverlay() {
-        $('#lightbox__overlay, #lightbox__overlay-container').remove();
-        $('#content').removeClass('blur');
+        $('img#lightbox__overlay-img').addClass('out');
+        $('.blur').addClass('fadeOut');
+        setTimeout(function() {
+            $('#lightbox__overlay-container').remove();
+        }, 500);
     };
 
     $(document).keydown(function(event) {
@@ -15,11 +18,11 @@ jQuery.fn.lightbox = function() {
 
     $(this).click(function(event) {
         event.preventDefault();
-
         let img = $.parseHTML("<img id='lightbox__overlay-img'></img>");
         let src = $(this).attr("src");
         $(img).attr("src", src);
         $('#content').addClass('blur');
+        $('#content').removeClass('fadeOut');
 
         let container = $.parseHTML("<div id='lightbox__overlay-container'></div>");
         $(container).append(img);
