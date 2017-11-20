@@ -33,6 +33,8 @@ jQuery.fn.lightbox = function() {
     });
     return this;
 };
+
+
 // alternative Schreibweise!
 /* let initLightbox = function(item) {
 
